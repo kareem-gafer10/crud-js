@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import Table from "./Components/Table";
+import Form from "./Components/Form";
+import { ProductContext } from "./Context/ProductContext";
 
-function App() {
+
+const App = () => {
+  const { showForm, openForm } = useContext(ProductContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="wrapper m-5 w-50 mx-auto">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2 className="text-primary">Crud Operations</h2>
+          <button className="btn btn-primary" onClick={showForm}>
+            Add Product
+          </button>
+        </div>
+
+        <Table />
+        {openForm && <Form />}
+      </div>
   );
-}
+};
 
 export default App;
