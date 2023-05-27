@@ -4,7 +4,7 @@ import { ProductContext } from "../Context/ProductContext";
 const Table = () => {
   const  { products,deleteProducts,updateProducts }  = useContext(ProductContext);
   return (
-    <table className="table table-dark table-hover text-center m-3">
+    <table className="table table-dark table-hover text-center my-5">
       <thead>
         <tr>
           <th>ID</th>

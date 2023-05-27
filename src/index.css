@@ -1,29 +1,27 @@
-.wrapper {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
+body{
+  background: #000;
 }
-.form-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+
+
+
+@media (max-width: 576px) {
+  .table-width {
+    width: 100% !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .table th,
+  .table td {
+    border-top: none !important;
+    padding: 5px 2px !important;
+  }
+  select option {
+    font-size: 10px;
+  }
 }
-form {
-  background-color: #fff;
-  width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-}
-form button {
-  margin: 20px 5px;
-  padding: 5px;
-  width: 80px;
-}
+
+
+
+
+

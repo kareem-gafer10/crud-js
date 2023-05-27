@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import {ProductContext} from "../Context/ProductContext"
-
+import "./Form.css"
 const Form = () => {
   const {closeForm,allProducts,addProducts} = useContext(ProductContext);
   
@@ -34,8 +34,8 @@ const Form = () => {
     
       <form onSubmit={displayProduct}>
 
-        <div className="form-group">
-          <label>Name</label>
+        <div className="form-group mb-3">
+          <label className=" form-label">Name</label>
           <input
             className="form-control mt-2"
             type="text"
@@ -47,8 +47,8 @@ const Form = () => {
           {error && product.name==="" && <span className="text-danger">Product Name required</span>}
         </div>
 
-        <div className="form-group">
-          <label>Price</label>
+        <div className="form-group mb-3">
+          <label className=" form-label">Price</label>
           <input
             className="form-control mt-2"
             type="number"
@@ -61,8 +61,8 @@ const Form = () => {
         </div>
 
         <div className="form-group">
-        <label>Category</label>
-          <select className="form-control mt-2" name="category"  onChange={changeFormData} value={product.category}>
+        <label className=" form-label">Category</label>
+          <select className="form-select form-select-sm"  name="category"  onChange={changeFormData} value={product.category}>
             <option value="-1"></option>
             <option value="mobiles">Mobiles</option>
             <option value="laptops">Laptops</option>
